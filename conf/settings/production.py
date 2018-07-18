@@ -2,7 +2,7 @@
 from .base import *
 
 # Double check debug is off
-DEBUG = False
+DEBUG = True
 
 # HOST CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.5/releases/1.5/#allowed-hosts-required-in-production
