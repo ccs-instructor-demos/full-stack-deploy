@@ -10,6 +10,10 @@ ALLOWED_HOSTS = [
     'full-stack-deploy.herokuapp.com'
 ]
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # HEROKU CONFIGURATION for DATABASE_URL, ALLOWED_HOSTS, WhiteNoise (for static assets), Logging, and Heroku CI
 # See: https://github.com/heroku/django-heroku
 import django_heroku
