@@ -7,7 +7,7 @@ DEBUG = True
 # HOST CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.5/releases/1.5/#allowed-hosts-required-in-production
 ALLOWED_HOSTS = [
-    'full-stack-deploy.herokuapp.com'
+    'full-stack-deploy.herokuapp.com',
 ]
 
 # Simplified static file serving.
