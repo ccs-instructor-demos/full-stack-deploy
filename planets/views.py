@@ -8,17 +8,20 @@ from .models import Planet
 from .serializers import PlanetSerializer
 
 
-class PlanetViewSet(viewsets.ViewSet):
+class PlanetViewSet(viewsets.ModelViewSet):
     """
-    A simple ViewSet for listing or retrieving users.
+    A simple ViewSet for listing or retrieving planets.
     """
-    def list(self, request):
-        queryset = Planet.objects.all()
-        serializer = PlanetSerializer(queryset, many=True)
-        return Response(serializer.data)
+    queryset = Planet.objects.all()
+    serializer_class = PlanetSerializer
 
-    def retrieve(self, request, pk=None):
-        queryset = Planet.objects.all()
-        planet = get_object_or_404(queryset, pk=pk)
-        serializer = PlanetSerializer(planet)
-        return Response(serializer.data)
+    # def list(self, request):
+    #     queryset = Planet.objects.all()
+    #     serializer = PlanetSerializer(queryset, many=True)
+    #     return Response(serializer.data)
+    #
+    # def retrieve(self, request, pk=None):
+    #     queryset = Planet.objects.all()
+    #     planet = get_object_or_404(queryset, pk=pk)
+    #     serializer = PlanetSerializer(planet)
+    #     return Response(serializer.data)
